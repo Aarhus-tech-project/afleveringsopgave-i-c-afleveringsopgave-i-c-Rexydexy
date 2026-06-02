@@ -1,1 +1,3 @@
-﻿Console.WriteLine("Hello, World!");
+﻿
+TicTacToe game = new TicTacToe();
+game.Start();
