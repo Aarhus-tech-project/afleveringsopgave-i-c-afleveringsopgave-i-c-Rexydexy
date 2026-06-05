@@ -32,3 +32,6 @@ private void DrawBoard()
     PrintCell(6); Console.Write("|"); PrintCell(7); Console.Write("|"); PrintCell(8); Console.WriteLine();
     Console.WriteLine();
 }
+
+
+// because the previous version used ANSI escape codes so I wanted to simplfy it. 
