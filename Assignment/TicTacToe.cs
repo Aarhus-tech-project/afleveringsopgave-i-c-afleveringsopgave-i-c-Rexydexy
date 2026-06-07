@@ -8,7 +8,6 @@ namespace Assignment
 
         public void Start()
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
             bool running = true;
             Console.Clear();
             PrintTitle();
