@@ -190,28 +190,40 @@ namespace Assignment
             return false;
         }
 
-        private void DrawBoard()
+private void DrawBoard()
+{
+    Console.Clear();
+    PrintTitle();
+    Console.WriteLine("  Brættet:");
+    Console.WriteLine();
+
+    void PrintCell(int i)
+    {
+        if (board[i] == 'X')
         {
-            Console.Clear();
-            PrintTitle();
-            Console.WriteLine("  Brættet:");
-            Console.WriteLine();
-
-            string[] c = new string[9];
-            for (int i = 0; i < 9; i++)
-            {
-                if (board[i] == 'X')      c[i] = "\u001b[33m X \u001b[0m";
-                else if (board[i] == 'O') c[i] = "\u001b[36m O \u001b[0m";
-                else                      c[i] = $" {i + 1} ";
-            }
-
-            Console.WriteLine($"  {c[0]}|{c[1]}|{c[2]}");
-            Console.WriteLine("  ---+---+---");
-            Console.WriteLine($"  {c[3]}|{c[4]}|{c[5]}");
-            Console.WriteLine("  ---+---+---");
-            Console.WriteLine($"  {c[6]}|{c[7]}|{c[8]}");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(" X ");
+            Console.ResetColor();
         }
+        else if (board[i] == 'O')
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write(" O ");
+            Console.ResetColor();
+        }
+        else
+        {
+            Console.Write($" {i + 1} ");
+        }
+    }
+
+    PrintCell(0); Console.Write("|"); PrintCell(1); Console.Write("|"); PrintCell(2); Console.WriteLine();
+    Console.WriteLine("---+---+---");
+    PrintCell(3); Console.Write("|"); PrintCell(4); Console.Write("|"); PrintCell(5); Console.WriteLine();
+    Console.WriteLine("---+---+---");
+    PrintCell(6); Console.Write("|"); PrintCell(7); Console.Write("|"); PrintCell(8); Console.WriteLine();
+    Console.WriteLine();
+}
 
         private void ShowScoreBoard()
         {
