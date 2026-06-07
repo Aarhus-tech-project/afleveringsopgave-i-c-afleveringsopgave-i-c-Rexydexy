@@ -189,40 +189,40 @@ namespace Assignment
             return false;
         }
 
-private void DrawBoard()
-{
-    Console.Clear();
-    PrintTitle();
-    Console.WriteLine("  Brættet:");
-    Console.WriteLine();
-
-    void PrintCell(int i)
+    private void DrawBoard()
     {
-        if (board[i] == 'X')
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" X ");
-            Console.ResetColor();
-        }
-        else if (board[i] == 'O')
-        {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write(" O ");
-            Console.ResetColor();
-        }
-        else
-        {
-            Console.Write($" {i + 1} ");
-        }
-    }
+        Console.Clear();
+        PrintTitle();
+        Console.WriteLine("  Brættet:");
+        Console.WriteLine();
 
-    PrintCell(0); Console.Write("|"); PrintCell(1); Console.Write("|"); PrintCell(2); Console.WriteLine();
-    Console.WriteLine("---+---+---");
-    PrintCell(3); Console.Write("|"); PrintCell(4); Console.Write("|"); PrintCell(5); Console.WriteLine();
-    Console.WriteLine("---+---+---");
-    PrintCell(6); Console.Write("|"); PrintCell(7); Console.Write("|"); PrintCell(8); Console.WriteLine();
-    Console.WriteLine();
-}
+        void PrintCell(int i)
+        {
+            if (board[i] == 'X')
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write(" X ");
+                Console.ResetColor();
+            }
+            else if (board[i] == 'O')
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write(" O ");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.Write($" {i + 1} ");
+            }
+        }
+
+        PrintCell(0); Console.Write("|"); PrintCell(1); Console.Write("|"); PrintCell(2); Console.WriteLine();
+        Console.WriteLine("---+---+---");
+        PrintCell(3); Console.Write("|"); PrintCell(4); Console.Write("|"); PrintCell(5); Console.WriteLine();
+        Console.WriteLine("---+---+---");
+        PrintCell(6); Console.Write("|"); PrintCell(7); Console.Write("|"); PrintCell(8); Console.WriteLine();
+        Console.WriteLine();
+    }
 
         private void ShowScoreBoard()
         {
