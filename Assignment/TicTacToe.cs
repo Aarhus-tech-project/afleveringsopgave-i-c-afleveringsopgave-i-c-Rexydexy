@@ -189,7 +189,7 @@ namespace Assignment
             return false;
         }
 
-    private void DrawBoard()
+        private void DrawBoard()
     {
         Console.Clear();
         PrintTitle();
